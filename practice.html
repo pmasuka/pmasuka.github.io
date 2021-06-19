@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/html">
+
+<head>
+<title> Html and CSS Practice </title>
+</head>
+
+<style>
+.center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size:300%;
+}
+  h1 {
+  text-align: center;
+  }
+
+HTML CSSResult Skip Results Iframe
+EDIT ON
+.wrapper {
+  height: 100vh;
+  /*This part is important for centering*/
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.typing-demo {
+  width: 22ch;
+  animation: typing 2s steps(22), blink .5s step-end infinite alternate;
+  white-space: nowrap;
+  overflow: hidden;
+  border-right: 3px solid;
+  font-family: monospace;
+  font-size: 2em;
+}
+
+@keyframes typing {
+  from {
+    width: 0
+  }
+}
+
+@keyframes blink {
+  50% {
+    border-color: transparent
+  }
+}
+
+/* Please ❤ this if you like it! */
+.wrapper2 {
+  display: flex;
+  height: 100vh;
+  align-items: center;
+  justify-content: center;
+  background: #4776e6;
+  background: -webkit-linear-gradient(to right, #4776e6, #8e54e9);
+  background: linear-gradient(to right, #4776e6, #8e54e9);
+}
+.overflow-ellipsis {
+  width: 200px;
+  background-color: #fff;
+  padding: 15px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+body {
+  padding: 20px;
+  font-family: 'Open Sans', sans-serif;
+}
+
+.tile {
+  background: linear-gradient(to right, #2B32B2, #1488CC);
+  padding: 15px;
+  margin-bottom: 15px;
+  padding: 15px;
+  width: 300px;
+  color: #fff;
+}
+
+.line-clamp {
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 3; /* Change this line if you want. In this case it trimmed the text to 3 lines. */
+  overflow: hidden;
+}
+
+.line-clamp--four {
+  -webkit-line-clamp: 4; /* Trimmed the second tile to four lines. */
+}
+</style>
+
+<body>
+
+<h1> Learning Html</h1>
+
+<h2> The lazy loading attribute </h2>
+
+<figure>
+<img src="pardon_picture.jpg" loading="lazy"  alt="Pardon's Picture">
+    <figcaption> Pardon - Shot in Tokai, Cape Town </figcaption>
+</figure>
+
+<h2> Email, Call and SMS links </h2>
+
+<a href="mailto:pmasuka@gmail.com"?subject="I need your assistance"&body="Can you please send me a brochure with your services and fees""> Send us an email</a>
+
+<a href="tel:2631234567"> Call us </a>
+
+<a href="sms:2631234567"?body="I need your assistance"> Send us a message </a>
+
+<h2> Ordered lists start attribute </h2>
+
+<ol start="5">
+    <li> HTML </li>
+    <li> CSS </li>
+    <li> Javascript </li>
+    <li> Python </li>
+    <li> R </li>
+    <li> Rust </li>
+    <li> Go </li>
+</ol>
+
+<label for="value1">Low &nbsp; &nbsp; &nbsp; </label>
+<meter id="value1" min="0" max="100" low="30" high="75" optimum="80" value="25"></meter>
+
+<br>
+
+<label for="value2">Medium</label>
+<meter id="value2" min="0" max="100" low="30" high="75" optimum="80" value="50"></meter>
+
+<br>
+
+<label for="value3">High &nbsp; &nbsp; &nbsp; </label>
+<meter id="value3" min="0" max="100" low="30" high="75" optimum="80" value="80"></meter>
+
+<div class="wrapper">
+    <h1> Native HTML search </h1>
+
+    <input list="items">
+
+    <datalist id="items">
+        <option value="Pardon Masuka">
+        <option value ="Statistician">
+        <option value="Data Scientist">
+    </datalist>
+</div>
+
+<h2> Fieldset </h2>
+<form>
+  <fieldset>
+    <legend>Choose your favorite language</legend>
+
+    <input type="radio" id="javascript" name="language">
+    <label for="javascript">JavaScript</label><br/>
+
+    <input type="radio" id="python" name="language">
+    <label for="python">Python</label><br/>
+
+    <input type="radio" id="java" name="language">
+    <label for="java">Java</label>
+  </fieldset>
+</form>
+
+<h2> Window opener </h2>
+<a href="https://pmasuka.github.io/" target="_blank" rel="noopener"> Pardon's website </a>
+
+<h2> Native HTML sliders </h2>
+
+<label for="volume"> Volume </label>
+<input type="range" id="volume" name="volume" min="0" max="20">
+<br>
+<label for="result"> Your choice: </label>
+<input type="number" id="number" name="result">
+
+<h2> Mark text </h2>
+<p> This is how you <mark> mark </mark> text. Awesome, isn't it?</p>
+
+<h2> Using .webp format to make pictures smaller </h2>
+
+<picture>
+  <!-- load .webp image if supported -->
+  <source srcset="logo.webp" type="image/webp">
+
+  <!--
+	Fallback if `.webp` images or <picture> tag
+	not supported by the browser.
+  -->
+  <img src="pardon_picture.png" alt="logo">
+</picture>
+
+<h2> Video thumpnail </h2>
+<video poster="pardon_picture.jpg"></video>
+
+<div class="wrapper">
+    <div class="typing-demo">
+      This is a typing demo.
+    </div>
+</div>
+
+<h2> Center objects</h2>
+
+<p class="center"> This is centered text! </p>
+
+<h2> Truncate text </h2>
+
+<div class="wrapper2">
+  <div class="overflow-ellipsis">
+    This text is truncated, because there is not enough space to display it completely.
+  </div>
+</div>
+
+This text is trimmed to 3 lines
+<div class="tile">
+  <p class="line-clamp">
+    You can use <code>-webkit-line-clamp</code> property to truncate the text to the specific number of lines.
+    An ellipsis will be shown at the point where the text is clamped.
+  </p>
+</div>
+
+This text is trimmed to 4 lines
+<div class="tile">
+  <p class="line-clamp line-clamp--four">
+    You can use <code>-webkit-line-clamp</code> property to truncate the text to the specific number of lines.
+    An ellipsis will be shown at the point where the text is clamped.
+  </p>
+</div>
+
+This text is not trimmed
+<div class="tile">
+  <p>
+    You can use <code>-webkit-line-clamp</code> property to truncate the text to the specific number of lines.
+    An ellipsis will be shown at the point where the text is clamped.
+  </p>
+</div>
+</body>
+</html>
