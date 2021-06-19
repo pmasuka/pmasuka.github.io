@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Maka's videos</title>
+</head>
+
+<style>
+    h1 {
+    color:red;
+    text-align:center;
+    font-size:500%;
+    }
+   p {
+   color: green;
+   font-size: 200%
+   }
+div {
+    text-align:center;
+    font-size:200%;
+    color:red;
+}
+body {
+    background-color:lightblue;
+}
+a {
+font-size:200%;
+}
+</style>
+
+<body>
+<h1> Maka's fun videos!!!</h1>
+
+<div>
+<img src="Maka and Daddy.jpg" alt="Maka and Daddy" width="600" height="300" class="center">
+    <figcaption> Pic: Maka and Daddy</figcaption>
+</div>
+<p>
+    This video was recorded by Makatendeka Masuka.
+    <br>
+    Source: Recorded on the computer using Webcam
+    <br>
+    Date of recording: 13 June 2021
+    <br>
+    Video name: The story of the Poacher and the elephant
+    <br>
+    Video number: 1
+    </p>
+<div>
+<video width="600" height="300" controls>
+  <source src="video1.mp4" type="video/mp4">
+    Your browser does not support the video tag.
+    </video>
+</div>
+
+<a href="mailto:pmasuka@gmail.com">Email Us</a>
+</body>
+</html>
